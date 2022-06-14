@@ -1,0 +1,32 @@
+REST: Representatonal State Transfer 
+＞　httpめオッドを用いて情報をリクエストしXMLやJSONなどの汎用的な形式で応答するシンプルな仕組みのAPI
+＞　セッションなどの状態管理を行わず一回の通信でやり取りが完結する
+
+phpでJSONを扱う
+file_get_contents()
+
+ディレクトリトラバーサル　セキュリティリスクの事前回避
+file_get_contents()が使えない
+→cuRLを使う
+
+$response = file_get_contents($url);
+の代わりに
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, $url);
+$response = curl_exec($ch);
+
+https://qiita.com/kanataxa/items/522efb74421255f0e0a1
+POST HTMLフォームから取得
+GET 
+
+正規表現によるエラーチェック
+preg_match()
+
+変数が正しく設定されているか
+isset()
+
+php8
+str_contains()
+str_starts_with()
+str_ends_with()
