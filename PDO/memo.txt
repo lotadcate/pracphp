@@ -1,0 +1,20 @@
+PDO PHP Data Object
+dbh データベースハンドラー
+$dbh = new PDO('mysql:host=localhost;dbname:sample_db, $user, $password, $opt);
+postgreなら'pgsql:host=localhost;dbname:sample_db
+
+$opt = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // エラー処理
+    PDO::ATTR_EMULATE_PREPARES => false, // プリペアードステートメントのエミュレーションを有効にするかどうか
+    PDO::MYSQL_ATTR_MULTI_STATEMENTS => false, // マルチクエリを有効にするかどうか
+];
+
+例外処理
+> エラーが発生すると例外が投げられる(throw)ためそれを捕捉(catch)
+
+try {
+    // エラーの起こりうる処理
+} catch (例外　変数) {
+    例外発生時の処理b
+}
+
